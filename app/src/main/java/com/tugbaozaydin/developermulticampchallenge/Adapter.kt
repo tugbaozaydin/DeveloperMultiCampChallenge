@@ -5,12 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 
-class Adapter(val countryList: MutableList<Data>) :
+class Adapter(val dataList: MutableList<Data>) :
     RecyclerView.Adapter<Adapter.ModelViewHolder>() {
 
     class ModelViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -22,11 +21,11 @@ class Adapter(val countryList: MutableList<Data>) :
 
             //  bannerImage.setImageURI(Uri.parse(item.banner))
             Picasso.with(itemView.context).load(item.banner).into(bannerImage)
-          /*  itemCard.setOnClickListener {
+            itemCard.setOnClickListener {
                 val intent = Intent(itemView.context, DetailActivity::class.java)
                 intent.putExtra("id", position)
                 itemView.context.startActivity(intent)
-            }*/
+            }
 
         }
     }
@@ -37,10 +36,10 @@ class Adapter(val countryList: MutableList<Data>) :
     }
 
     override fun getItemCount(): Int {
-        return countryList.size
+        return dataList.size
     }
 
     override fun onBindViewHolder(holder: ModelViewHolder, position: Int) {
-        holder.bindItems(countryList.get(position), position)
+        holder.bindItems(dataList.get(position), position)
     }
 }
