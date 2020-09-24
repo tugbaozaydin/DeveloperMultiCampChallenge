@@ -22,14 +22,15 @@ class MainActivity : AppCompatActivity() {
         data.enqueue(object : Callback<List<Data>> {
             override fun onFailure(call: Call<List<Data>>, t: Throwable) {
                 Toast.makeText(applicationContext, t.message.toString(), Toast.LENGTH_LONG).show()
-                textview.setText(t.message.toString())
+
             }
 
             override fun onResponse(call: Call<List<Data>>, response: Response<List<Data>>) {
 
                 if (response.isSuccessful) {
                     dataList = (response.body() as MutableList<Data>?)!!
-                    textview.setText(dataList[0].description)
+                    dataRecyclerList.layoutManager = LinearLayoutManager(applicationContext, LinearLayoutManager.VERTICAL, false)
+                    dataRecyclerList.adapter = Adapter(dataList)
                 }
             }
         })

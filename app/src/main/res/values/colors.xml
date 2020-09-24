@@ -3,4 +3,8 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorKirmizi">#DB4437</color>
+    <color name="colorYesil">#0F9D58</color>
+    <color name="colorMavi">#4285F4</color>
+    <color name="colorSari">#F4B400</color>
 </resources>
