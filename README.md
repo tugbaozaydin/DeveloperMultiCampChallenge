@@ -1,0 +1,1 @@
+![Sertifika](/drawable/certificate.png)
