@@ -1,1 +1,1 @@
-![Sertifika](/drawable/certificate.png)
+![Sertifika](/app/src/main/res/drawable/certificate.png)
